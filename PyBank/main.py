@@ -49,9 +49,6 @@ greatest_decrease_index = monthly_change.index(greatest_decrease)
 greatest_decrease_year = year[greatest_decrease_index + 1]
 greatest_decrease_month = month[greatest_decrease_index + 1]
 
-
-#print(type('net_amount'))
-
 print("Financial Analysis")
 print("----------------------------")
 print(f"Total Months: {len(date)}")
@@ -64,17 +61,15 @@ print(f"Greatest Decrease in Profits: {greatest_decrease_month}-{greatest_decrea
 output_path = os.path.join("analysis", "analysis.txt")
 
 # Open the file using "write" mode. Specify the variable to hold the contents
-with open(output_path, 'w') as txtfile:
-   
-   
-   
-   txtfile.write("Financial Analysis")
-   txtfile.write("----------------------------")
-   txtfile.write(f"Total Months: {len(date)}")
-   txtfile.write(f"Total: ${sum_amount(net_amount)}")
-   txtfile.write(f"Average Change: ${round(average_change(monthly_change), 2)}")
-   txtfile.write(f"Greatest Increase in profits: {greatest_increase_month}-{greatest_increase_year} (${greatest_increase})")
-   txtfile.write(f"Greatest Decrease in Profits: {greatest_decrease_month}-{greatest_decrease_year} (${greatest_decrease})")
+with open(output_path, 'w') as txtfile:   
+  
+   txtfile.write("Financial Analysis\n")
+   txtfile.write("----------------------------\n")
+   txtfile.write(f"Total Months: {len(date)}\n")
+   txtfile.write(f"Total: ${sum_amount(net_amount)}\n")
+   txtfile.write(f"Average Change: ${round(average_change(monthly_change), 2)}\n")
+   txtfile.write(f"Greatest Increase in profits: {greatest_increase_month}-{greatest_increase_year} (${greatest_increase})\n")
+   txtfile.write(f"Greatest Decrease in Profits: {greatest_decrease_month}-{greatest_decrease_year} (${greatest_decrease})\n")
 
 
     
