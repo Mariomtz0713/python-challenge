@@ -60,7 +60,6 @@ print(f"Greatest Decrease in Profits: {greatest_decrease_month}-{greatest_decrea
 #Writing Analysis
 output_path = os.path.join("analysis", "analysis.txt")
 
-# Open the file using "write" mode. Specify the variable to hold the contents
 with open(output_path, 'w') as txtfile:   
   
    txtfile.write("Financial Analysis\n")
